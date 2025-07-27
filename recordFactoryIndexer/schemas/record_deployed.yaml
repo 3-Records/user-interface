@@ -1,0 +1,15 @@
+table: record_deployed
+event: RecordFactory::RecordDeployed
+
+fields:
+  contract_address: address              # ← this will default to the emitter (RecordFactory)
+  record: address(record)                # ← extract the deployed contract from the first event param
+  name: string
+  artist: string
+  symbol: string
+  tx_hash: hash
+  block_number: int
+  block_hash: hash
+  network: string
+  tx_index: int
+  log_index: int
