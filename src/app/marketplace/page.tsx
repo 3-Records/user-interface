@@ -86,10 +86,12 @@ export default function Store() {
                 {records.map((record) => (
                     
                     <RecordBox
+                        variant="market"
                         key={record.record}
                         contractAddress={record.record}
                         name={record.name}
                         artist={record.artist}
+                        href={`/buy-record/${record.contractAddress}`}
                     />
                 ))}
             </div>

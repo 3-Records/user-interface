@@ -177,11 +177,13 @@ export default function MyRecords() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-4">
         {ownedItems.map((item) => (
           <RecordBox
+            variant="owned"
             key={`${item.contractAddress}-${item.tokenId.toString()}`}
             contractAddress={item.contractAddress}
             name={item.name}
             artist={item.artist}
-            //tokenId={item.tokenId} // or .toString() if your route/props require string
+            tokenId={item.tokenId}
+            href={`/owned-record/${item.contractAddress}/${item.tokenId.toString()}`}
           />
         ))}
       </div>
