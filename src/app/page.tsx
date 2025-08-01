@@ -2,7 +2,8 @@
 
 import { useAccount } from "wagmi"
 import { useEffect, useState } from "react"
-import Store from "@/components/Store"
+import MyRecords from "@/components/Home"
+
 //import RecentlyListedNFTs from "@/components/RecentlyListed"
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
                 </div>
             ) : (
                 <div className="flex items-center justify-center p-4 md:p-6 xl:p-8">
-                    <Store />
+                    <MyRecords />
                 </div>
             )} 
         </main>

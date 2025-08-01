@@ -14,7 +14,6 @@ export default function RootLayout(props: { children: ReactNode }) {
 
     return (
         <html lang="en">
-    
             <body className="bg-zinc-50">
                 <Providers>
                     <Header />
